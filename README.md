@@ -15,4 +15,6 @@ than the other player. The game was made in a linux enviroment, and to compile t
  The multiplayer nature of the game is implemented using two detached threads, which are responsible for taking input from the users, and changing the positions of the 
  characters(while keeping inside the constraints of the board).
  
- The rendering, and collisions with objects take place in the main thread.
+ The rendering, and collisions with objects take place in the main thread, and the sfml library is used for the keyboard inputs, and rendering.
+ Along with using atomic variables to insure there are no race conditions. In this particular assignment we were not allowed to used mutexes and
+ sempahores, and as such they are not present in the code.
